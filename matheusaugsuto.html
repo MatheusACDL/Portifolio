@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>teste</title>
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      /* font-family: Arial, Helvetica, sans-serif; */
+    }
+    body {
+      /* position: relative; */
+    }
+    .bemvindo {
+      color: white;
+      position: absolute;
+      top: 20%;
+      left: 10%;
+      font-size: 2em;
+      transition: color 0.5s ease-in-out, box-shadow 0.5s ease-in-out,
+        text-shadow 1s;
+    }
+    .bemvindo:hover {
+      text-shadow: 0px 0px 50px #34a2e2;
+      cursor: cell;
+    }
+
+    .bts-a {
+      display: inline;
+      position: absolute;
+      top: 50%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+      width: 500px;
+      height: 50px;
+    }
+    .bts-a > a {
+      display: block;
+      font-size: 2em;
+      padding: 5px 5px;
+      /* background-color: red; */
+      text-decoration: none;
+      border: 2px solid white;
+      border-radius: 20px;
+      color: white;
+      box-shadow: inset 0 0 0 0;
+      text-align: center;
+      transition: color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    }
+    .bts-a > a:hover {
+      box-shadow: inset 500px 0 0 0 rgb(52, 162, 226);
+    }
+    .fotofundo {
+      position: absolute;
+      margin: auto;
+      top: 15%;
+      right: 10%;
+      width: 400px;
+      height: 500px;
+      display: flex;
+    }
+    .fotofundo > h3 {
+      margin-left: 180px;
+      color: #fff;
+      font-family: cursive;
+    }
+    #aCV {
+      font-size: 20px;
+      text-decoration: none;
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      display: flex;
+      width: 350px;
+      height: 350px;
+    }
+    #bgfoto {
+      height: 500px;
+      width: 500px;
+      transition: width 1s, height 1s, transition 2s;
+    }
+    #bgfoto:hover {
+      height: 530px;
+      cursor: pointer;
+    }
+
+    /* #bgfoto {
+      position: absolute;
+      height: 500px;
+      width: 500px;
+      top: 30%;
+      right: 10%;
+      transition: width 1s, height 1s, transition 2s;
+    }
+    #bgfoto:hover {
+      position: absolute;
+      top: 230px;
+      height: 530px;
+      cursor: pointer;
+    }
+    #aCV {
+      font-size: 50px;
+      text-decoration: none;
+      color: white;
+      width: 100px;
+      height: 100px;
+    } */
+  </style>
+  <body>
+    <main>
+      <div class="bemvindo">
+        <h1>Bem vindo ao meu Portifólio</h1>
+      </div>
+      <div class="bts-a">
+        <a href="https://www.linkedin.com/in/matheusacdl/" target="_blank"
+          >Linkedin</a
+        ><br />
+        <a href="https://github.com/MatheusACDL" target="_blank">Github</a>
+      </div>
+      <div class="fotofundo">
+        <h3>👇CV👇</h3>
+        <a href="Matheus Augusto Cesar de Laporta (2) (1).pdf" download id="aCV"
+          ><img src="imagens/icon.svg" alt="" id="bgfoto"
+        /></a>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+
+/* @keyframes animacao {
+  0%{
+    display: none;
+    background-color: aliceblue;
+  }
+  100%{
+    display: block;
+    background-color: aqua;
+  }
+} */
+body {
+  width: 98vw;
+  height: 85vh;
+  background-image: linear-gradient(to bottom rgb(61, 61, 61), #000000);
+}
+main{
+  border: 1px solid rgba(255, 255, 255, 0.315);
+  width: 98vw;
+  display: block;
+  margin: auto;
+}
+main > p {
+  color: white;
+  text-align: center;
+  font-size: 1.5em;
+}
+h1{
+  background-color:   rgb(38, 120, 167);
+  box-shadow: 3px 3px 5px  rgb(59, 183, 255);
+  display: block;
+  width: 200px;
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+}
+.container{
+  /* animation: animacao;
+  animation-duration: 2s; */
+  width: 500px;
+  margin: 20px auto;
+  text-align: center;
+  border: 1px solid white;
+  display: block;
+  color: rgba(255, 255, 255, 0.548);
+}
+#area{
+  width: 200px;
+  height: 100px;
+  color: white;
+  font-size: 1.2em;
+  display: flex;
+}
+#PoM{
+  margin: auto;
+}
+/* #restab{
+  width: 500px;
+  height: 500px;
+  color: white;
+} */

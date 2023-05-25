@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+  </head>
+  <style>
+    /* @keyframes animacao {
+      100% {
+        background-color: rgb(1, 73, 73);
+      }
+      50% {
+        background-color: rgb(2, 180, 180);
+        width: 250px;
+        height: 250px;
+        transform: matrix(-50%);
+      }
+      0% {
+        background-color: aqua;
+        width: 1px;
+        height: 1px;
+      }
+    } */
+    /* * {
+      box-sizing: border-box;
+
+      overflow-y: hidden;
+      overflow-x: hidden;
+    }
+    body {
+      background-image: linear-gradient(to bottom rgb(61, 61, 61), #000000);
+      position: relative;
+      height: 100vh;
+      width: 100vw;
+    } */
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+    .picture {
+      background: url(../imagens/IMG_20211016_215109.jpg);
+      background-size: cover;
+      box-shadow: 0px 0px 10px rgb(119, 119, 119);
+      border-radius: 50%;
+      display: block;
+      margin: auto;
+      width: 200px;
+      height: 200px;
+      transition: 1s;
+    }
+    .picture:hover{
+      box-shadow: 0px 0px 20px  rgb(52, 162, 226);
+    }
+    h2 {
+      color: rgb(52, 162, 226);
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .container {
+      border: 1px solid white;
+      width: 500px;
+      height: 500px;
+      display: inline-block;
+      margin: 20px;
+      position: relative;
+      left: 5%;
+    }
+    main > div > p {
+      color: rgb(255, 255, 255);
+      font-size: 1.1em;
+      text-align: justify;
+      padding: 10px;
+    }
+    .swiper {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 500px;
+      height: 500px;
+      margin: 10px;
+      border: 3px solid rgb(52, 162, 226);;
+      background-color: transparent;
+      box-shadow: 0px 0px 20px #c4c3c33d;
+      filter: blur(2px);
+    }
+    .swiper-slide-active {
+      filter: blur(0px);
+    }
+    .testimonialBox {
+      position: relative;
+      width: 100%;
+      padding: 40px;
+      padding-top: 90px;
+      color: #fff;
+      font-size: 1.5em;
+      
+    }
+    .swiper-container-3d .swiper-slide-shadow-left,
+    .swiper-container-3d .swiper-slide-shadow-rigth {
+      background-image: none;
+    }
+  </style>
+  <body>
+    <div class="picture"></div>
+        <h2>Quem sou eu ?</h2>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonialBox">
+                <div class="content">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Deserunt odio nobis praesentium in iure perspiciatis nesciunt 
+                    temporibus laudantium explicabo, laborum, soluta iusto blanditiis!
+                     Labore perspiciatis, eaque exercitationem libero nostrum blanditiis!
+                    </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonialBox">
+                <div class="content">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Deserunt odio nobis praesentium in iure perspiciatis nesciunt 
+                    temporibus laudantium explicabo, laborum, soluta iusto blanditiis!
+                     Labore perspiciatis, eaque exercitationem libero nostrum blanditiis!
+                    </p>
+                </div>
+              </div>
+            </div><div class="swiper-slide">
+              <div class="testimonialBox">
+                <div class="content">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Deserunt odio nobis praesentium in iure perspiciatis nesciunt 
+                    temporibus laudantium explicabo, laborum, soluta iusto blanditiis!
+                     Labore perspiciatis, eaque exercitationem libero nostrum blanditiis!
+                    </p>
+                </div>
+              </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 2,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
+  </body>
+</html>
