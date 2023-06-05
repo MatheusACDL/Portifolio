@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estrangeiro</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Estrangeiro ??</h2>
+      <p>
+        Voce nasceu em: <input type="text" name="txtNasc" id="txtNasc" />
+        <input type="button" value="Verificar" onclick="verificarNasc ()" />
+      </p>
+
+      <div id="respostaNasc"></div>
+    </div>
+  </body>
+  <script>
+    function verificarNasc() {
+      let txtNasc = document.getElementById("txtNasc");
+      let respsota = document.getElementById("respostaNasc");
+      let resp = txtNasc.value;
+
+      if (resp == "Brasil") {
+        respsota.innerHTML = `Voce é em Brasileiro`;
+      } else {
+        respsota.innerHTML = `Voce é Estrangeiro (${resp})`;
+      }
+    }
+  </script>
+</html>

@@ -9,6 +9,9 @@
     background-color: aqua;
   }
 } */
+*{
+  color: #000000;
+}
 body {
   width: 98vw;
   height: 85vh;
@@ -21,7 +24,7 @@ main{
   margin: auto;
 }
 main > p {
-  color: white;
+  color: #000000;
   text-align: center;
   font-size: 1.5em;
 }
@@ -44,16 +47,7 @@ h1{
   display: block;
   color: rgba(255, 255, 255, 0.548);
 }
-#area{
-  width: 200px;
-  height: 100px;
-  color: white;
-  font-size: 1.2em;
-  display: flex;
-}
-#PoM{
-  margin: auto;
-}
+
 /* #restab{
   width: 500px;
   height: 500px;

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indentidade</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Indentidade</h2>
+  <section>
+      <div>
+      <p>
+          Idade:
+          <input type="number" name="txtano" id="txtano" min="0">
+      </p>
+      <p>
+      Sexo:
+          <input type="radio" name="radsex" id="masc"> 
+          <label for="masc"> Masculino</label>
+          <input type="radio" name="radsex" id="femi">
+          <label for="femi"> Feminino</label>
+      </p>
+      <p>
+          <input type="button" value="Verificar" onclick="Verificar()">
+      </div> 
+    </p>
+      <div id="resp" style="text-align: center;">
+          Resposta
+      </div>
+  </section>
+  </div>
+  </body>
+  <script>
+    function Verificar() {
+  var data = new Date();
+  var ano = data.getFullYear();
+  var fano = document.getElementById("txtano");
+  var res = document.getElementById("resp");
+
+  if (fano.value.length == 0 || Number(fano.value) > ano) {
+    window.alert("erro");
+  } else {
+    var fsex = document.getElementsByName("radsex");
+    var idade = ano - Number(fano.value);
+    var gen = "";
+    if (fsex[0].checked) {
+      gen = "homem";
+    } else if (fsex[1].checked) {
+      gen = "mulher";
+    }
+    res.style.textAlign = "center";
+    res.innerHTML = `Você é ${gen}, nascido(a) em ${idade} `;
+  }
+}
+
+  </script>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificador</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Analisador de numeros</h2>
+      <section>
+        <div id="DivAnalis" style="text-align: center">
+          Numero entre 1 a 100 <input type="number" id="idInicioAnalis" />
+          <input
+            id="botão"
+            type="button"
+            value="adicionar"
+            onclick="adicionar()"
+          />
+        </div>
+        <select name="select" id="idSelectAnalis"></select>
+        <input type="button" value="finalizar" onclick="finalizar()" />
+        <div id="resAnalis"></div>
+      </section>
+    </div>
+  </body>
+  <script>
+    const values = [];
+    const adicionar = () => {
+      const inicio = parseInt(document.getElementById("idInicioAnalis").value);
+      const select = document.getElementById("idSelectAnalis");
+
+      const item = document.createElement("option");
+      item.text = `valor ${inicio} adicionado`;
+      select.appendChild(item);
+      values.push(inicio);
+    };
+
+    const finalizar = () => {
+      const res = document.querySelector("#resAnalis");
+      let maior = Number(values[0]);
+      let menor = Number(values[0]);
+      let soma = 0;
+      let media = 0;
+
+      for (let element of values) {
+        if (maior < element) {
+          maior = element;
+        } else {
+          menor = element;
+        }
+
+        soma += element;
+      }
+      media = soma / values.length;
+
+      res.innerHTML = `Ao todo temos ${values.length} itens<p> O maior numero é ${maior}</p> <p>O menor é ${menor}</p> <p>A soma é ${soma}</p> A media é ${media}`;
+    };
+  </script>
+</html>

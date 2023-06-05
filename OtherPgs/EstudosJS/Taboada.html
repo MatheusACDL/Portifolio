@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taboada</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>TABUADA</h2>
+      <section>
+        <div id="testetab" style="text-align: center">
+          Qual tabuada você gostaria de saber?
+          <input type="number" id="idInicio" /> <br />
+        </div>
+        <input
+          id="botão"
+          type="button"
+          value="Contar"
+          onclick="multiplicar()"
+        />
+        <div id="restab">RESPOSTA</div>
+      </section>
+    </div>
+  </body>
+  <script>
+    function multiplicar() {
+      let x = parseInt(document.getElementById("idInicio").value);
+      let res = document.getElementById("restab");
+      res.innerHTML = "Resposta";
+      if (x == 0) {
+        window.alert("Coloque um numero maior que 0");
+      } else {
+        for (i = 1; i <= 10; i++) {
+          res.innerHTML += `<br> ${i} x ${x} = ${i * x} <br>`;
+        }
+      }
+    }
+  </script>
+</html>
