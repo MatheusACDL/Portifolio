@@ -6,13 +6,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Soma</title>
   </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      color: #fff;
+    }
+    body {
+      background-color: #000;
+    }
+    h1 {
+      text-align: center;
+      margin: 60px;
+    }
+    p {
+      text-align: center;
+      text-decoration: underline;
+      font-size: 1.3em;
+    }
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 3px solid #fff;
+      box-shadow: 0px 0px 40px #34a2e2;
+      padding: 50px;
+      font-size: 1.3em;
+    }
+    #res {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .Cinput {
+      width: 100px;
+      height: 25px;
+      color: #34a2e2;
+      font-size: 0.8em;
+      font-weight: bold;
+      text-align: center;
+    }
+    .Cinput:focus {
+      outline: none;
+      border-color: #34a2e2;
+      box-shadow: 0 0 0 1px #34a2e2;
+    }
+    #button {
+      font-weight: bolder;
+      font-size: 0.7em;
+      height: 30px;
+      width: 90px;
+      color: #000;
+      background-color: #34a2e2;
+      border: 1px solid #000;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.5s;
+    }
+    #button:hover {
+      height: 31px;
+      /* background-color: #; */
+      border: 2px solid #fff;
+      box-shadow: 0px 0px 10px #34a2e2;
+    }
+    #button:focus {
+      color: #fff;
+    }
+  </style>
   <body>
+    <h1>Somando</h1>
+    <p>Digite 2 valores que deseja SOMAR !</p>
     <div class="container">
-      <h2>Somando</h2>
-      <input type="number" name="t1" id="txt1" /> +
-      <input type="number" name="t2" id="txt2" />
-      <input type="button" value="Somar" onclick="somar()" />
-      <div id="res">Resultado testando:</div>
+      <input type="number" name="t1" id="txt1" class="Cinput" /> +
+      <input type="number" name="t2" id="txt2" class="Cinput" />
+      <input type="button" value="Somar" onclick="somar()" id="button" />
+      <div id="res">Resultado:</div>
     </div>
   </body>
   <script>
