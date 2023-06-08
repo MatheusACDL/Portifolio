@@ -6,13 +6,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Multas</title>
   </head>
+
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+    body {
+      background-color: #000;
+      color: #fff;
+    }
+    h1 {
+      margin: 20px;
+      text-align: center;
+    }
+    .container {
+      align-items: center;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 3px solid #fff;
+      box-shadow: 0px 0px 40px #34a2e2;
+      padding: 50px;
+      font-size: 1.3em;
+    }
+    #button {
+      display: block;
+      margin: auto;
+      font-weight: bolder;
+      font-size: 0.7em;
+      height: 25px;
+      width: 100px;
+      color: #000;
+      background-color: #34a2e2;
+      border: 1px solid #000;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.5s;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    #button:hover {
+      border: 2px solid #fff;
+      box-shadow: 0px 0px 10px #34a2e2;
+    }
+    #button:focus {
+      color: #fff;
+    }
+    #txtvel {
+      width: 100px;
+      height: 25px;
+      color: #34a2e2;
+      font-size: 0.8em;
+      font-weight: bold;
+      text-align: center;
+    }
+    #txtvel:focus {
+      outline: none;
+      border-color: #34a2e2;
+      box-shadow: 0 0 0 1px #34a2e2;
+    }
+  </style>
   <body>
+    <h1>Sistema de Multas</h1>
     <div class="container">
-      <h2>Sistema de Multas</h2>
       <p>
         Velocidade do carro
         <input type="number" name="txtvel" id="txtvel" /> KM/h
-        <input type="button" value="Verificar" onclick="calcularVel()" />
+        <input
+          type="button"
+          value="Verificar"
+          onclick="calcularVel()"
+          id="button"
+        />
       </p>
       <div id="respostaVel"></div>
     </div>
@@ -23,9 +91,10 @@
       let res = window.document.getElementById("respostaVel");
       let vel = Number(txtvel.value);
       res.innerHTML = `Sua velocidadde foi de <strong> ${vel}  KM/h </strong>`;
-
-      if (vel > 60) {
-        res.innerHTML = "Voce esta Multado, SEM VERGONHA !!";
+      if (vel <= 0) {
+        res.innerHTML = "Coloque uma velocidade maior que 0 !";
+      } else if (vel > 60) {
+        res.innerHTML = "Voce esta Multado!";
       } else {
         res.innerHTML = `<strong> ${vel}Km/h </strong> Esta dentro do permitido`;
       }
