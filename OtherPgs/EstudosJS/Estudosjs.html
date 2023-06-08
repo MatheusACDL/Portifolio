@@ -15,9 +15,16 @@
       background-color: #000;
       color: #fff;
     }
-    h2 {
-      margin: 20px;
+    h1 {
+      color: white;
       text-align: center;
+      margin: 20px;
+      cursor: cell;
+      transition: color 0.5s ease-in-out, box-shadow 0.5s ease-in-out,
+        text-shadow 1s;
+    }
+    h1:hover {
+      text-shadow: 0px 0px 50px #34a2e2;
     }
     .container {
       display: block;
@@ -27,7 +34,11 @@
       /* height: 80vh; */
       /* background-color: red; */
     }
-
+    p {
+      text-align: center;
+      text-decoration: underline;
+      font-size: 1.3em;
+    }
     .options {
       font-size: 2em;
       text-align: center;
@@ -50,10 +61,14 @@
     }
   </style>
   <body>
-    <h2>
-      Bem vindo a seção de estudos. <br />
+    <h1>
+      Bem vindo a secção de atividades. <br />
       Selecione qual exercicio deseja ver
-    </h2>
+    </h1>
+    <p>
+      Nesta pagina, você encontrará os alguns excercícios que desenvolvi
+      enquanto estudava !!
+    </p>
     <div class="container">
       <div class="top">
         <a class="options" href="clickaqui.html">Mouse'in/out</a>
