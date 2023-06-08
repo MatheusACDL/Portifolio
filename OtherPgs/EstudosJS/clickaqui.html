@@ -1,47 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clique</title>
-</head>
-<style>
-  #area{
-  width: 200px;
-  height: 100px;
-  color: #000000;
-  font-size: 1.2em;
-  display: flex;
-}
-#PoM{
-  margin: auto;
-}
-</style>
-<body>
-  <div id="area" class="container"><p id="PoM">Click Aqui</p></div>
-  <div class="container">
-</body>
-<script>
-  var a = document.getElementById("area");
-a.addEventListener("click", clicar);
-a.addEventListener("mouseenter", entrar);
-a.addEventListener("mouseout", sair);
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clique</title>
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+    h1 {
+      color: #fff;
+      text-align: center;
+      padding-top: 50px;
+    }
+    main {
+      width: 100vw;
+      height: 100vh;
+      /* background-color: red; */
+    }
+    body {
+      background-color: #000000;
+    }
+    .container {
+      width: 200px;
+      height: 100px;
+      color: #000000;
+      border: 3px solid #ffffff;
+      box-shadow: 0px 0px 50px #34a2e2;
+      text-align: center;
+      padding-top: 60px;
+      font-size: 1.6em;
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <main>
+      <h1>Passe o mouse sobre o quadrado logo abaixo:</h1>
+      <div id="area" class="container">Passe o mouse</div>
+    </main>
+  </body>
+  <script>
+    var a = document.getElementById("area");
+    a.addEventListener("click", clicar);
+    a.addEventListener("mouseenter", entrar);
+    a.addEventListener("mouseout", sair);
 
-function clicar() {
-  // a.innerText = "Clicou!"; // innerText > muda o texto atual
-  a.style.background = "red";
-}
+    function clicar() {
+      a.innerText = "Clicou!"; // innerText > muda o texto atual
+      a.style.background = "red";
+    }
 
-function entrar() {
-  // a.innerText = "Entrou!";
-  a.style.background = "green";
-}
+    function entrar() {
+      a.innerText = "Clique";
+      a.style.background = "green";
+    }
 
-function sair() {
-  // a.innerText = "Saiu!";
-  a.style.background = "none";
-}
-
-</script>
+    function sair() {
+      a.innerText = "Passe o mouse";
+      a.style.background = "none";
+    }
+  </script>
 </html>
