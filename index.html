@@ -4,22 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styleIndex.css2" media="all" />
     <link rel="stylesheet" href="media-queries2.css" />
-    <link rel="stylesheet" href="cel.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <title>Matheus Augusto</title>
   </head>
   <body>
     <header>
       <a href="index.html" id="matheusaugusto">Matheus Augusto</a>
-      <ul>
-        <br />
-        <li><a href="OtherPgs/perfil.html" target="frame">Perfil</a></li>
-        <li>
-          <a href="OtherPgs/projetos.html" target="frame">Projetos JS</a>
-        </li>
-        <li><a href="OtherPgs/contato.html" target="frame">Contato</a></li>
-      </ul>
+      <span class="material-icons" id="burguer" onclick="clickMenu()"
+        >menu</span
+      >
+      <menu id="itens">
+        <ul>
+          <br />
+          <li><a href="OtherPgs/perfil.html" target="frame">Perfil</a></li>
+          <li>
+            <a href="OtherPgs/projetos.html" target="frame">Projetos JS</a>
+          </li>
+          <li><a href="OtherPgs/contato.html" target="frame">Contato</a></li>
+        </ul>
+      </menu>
     </header>
     <main></main>
     <iframe
@@ -29,6 +36,14 @@
       id="MainIframe"
       >teste</iframe
     >
-    <!-- <footer><p>Sites desenvolvido por Matheus Augusto</p></footer> -->
+    <script>
+      function clickMenu() {
+        if (itens.style.display == "block") {
+          itens.style.display = "none";
+        } else {
+          itens.style.display = "block";
+        }
+      }
+    </script>
   </body>
 </html>
