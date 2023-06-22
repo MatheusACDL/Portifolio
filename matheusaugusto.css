@@ -50,6 +50,61 @@
     margin-bottom: 20px;
   }
 }
+@media screen and (min-width:769px) and (max-width:1199px) {
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+  p {
+    font-size: 1.1em;
+    font-family: cursive;
+    color: #34a2e2;
+    text-align: center;
+  }
+  .bemvindo {
+    font-size: 1.2em;
+    color: white;
+    text-align: center;
+    margin: 20px;
+    margin-top: 100px;
+  }
+  .bts-a {
+    display: block;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    margin-top: 100px;
+    width: 300px;
+    height: 200px;
+    /* background-color: red; */
+  }
+  .bts-a > a {
+    display: block;
+    font-size: 1.5em;
+    width: 300px;
+    padding: 10px;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+  }
+  .fotofundo {
+    text-align: center;
+    margin: 30px;
+  }
+  .fotofundo > h3 {
+    margin-bottom: 20px;
+    font-size: 1em;
+    color: #fff;
+    font-family: cursive;
+  }
+  #bgfoto {
+    height: 217px;
+    width: 200px;
+    margin-bottom: 20px;
+  }
+}
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @media screen and (min-width: 1200px) {
   * {

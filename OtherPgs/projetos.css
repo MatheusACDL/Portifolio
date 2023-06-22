@@ -13,7 +13,7 @@
 
   p {
     margin: 20px;
-    margin-top: 30px;
+    margin-top: 50px;
     font-size: 1.2em;
     text-align: center;
     text-decoration: underline;
@@ -31,7 +31,7 @@
     display: block;
     margin: 20px auto;
     /* margin: ; */
-    width: 90vw;
+    width: 60vw;
     height: 100px;
     position: relative;
     border: 3px solid #34a2e2;
@@ -44,14 +44,68 @@
     border-radius: 5px;
     display: block;
     text-decoration: none;
-    width: 90vw;
+    width: 60vw;
     height: 70px;
     padding-top: 30px;
     box-shadow: inset 0 0 0 0;
     transition: color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
   }
   }
+@media screen and (min-width:769px) and (max-width:1199px){
+  * {
+    margin: 0px;
+    padding: 0px;
+    color: #fff;
+  }
+  h1 {
+    color: #fff;
+    text-align: center;
+    padding-top: 30px;
+    margin: auto;
+  }
 
+  p {
+    margin: 20px;
+    margin-top: 50px;
+    font-size: 1.2em;
+    text-align: center;
+    text-decoration: underline;
+  }
+  
+  .container {
+    width: 98vw;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: red; */
+    /* text-align: center; */
+  }
+  .buttons {
+    display: block;
+    margin: 20px auto;
+    /* margin: ; */
+    width: 50vw;
+    height: 100px;
+    position: relative;
+    border: 3px solid #34a2e2;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 2em;
+  }
+
+  .a {
+    border-radius: 5px;
+    display: block;
+    text-decoration: none;
+    width: 50vw;
+    height: 70px;
+    padding-top: 30px;
+    box-shadow: inset 0 0 0 0;
+    transition: color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  }
+  }
 @media screen and (min-width:1200px){
 * {
   margin: 0px;
